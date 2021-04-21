@@ -25,7 +25,7 @@ namespace ShopNuocHoa.Data.Configuration
 
             builder.Property(x => x.Email).IsRequired().IsUnicode(false).HasMaxLength(50).HasColumnName("Email");
 
-            builder.Property(x => x.SDT).IsRequired().HasColumnType("PhoneNumber").HasColumnName("Số ĐT").HasMaxLength(20);
+            builder.Property(x => x.SDT).IsRequired().HasColumnName("Số ĐT").HasMaxLength(20);
         }
     }
 }
