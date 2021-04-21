@@ -17,7 +17,7 @@ namespace ShopNuocHoa.Data.Configuration
 
             builder.Property(x => x.HoTen).IsRequired().HasMaxLength(50).HasColumnName("Họ Tên");
 
-            builder.Property(x => x.Email).IsRequired().HasMaxLength(50).HasColumnName("Email").HasColumnType("EmailAddress");
+            builder.Property(x => x.Email).IsRequired().HasMaxLength(50).HasColumnName("Email");
 
             builder.Property(x => x.NoiDung).HasMaxLength(1000).HasColumnName("Nội dung");
 

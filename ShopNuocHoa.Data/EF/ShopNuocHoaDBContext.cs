@@ -7,7 +7,7 @@ using System.Text;
 
 namespace ShopNuocHoa.Data.EF
 {
-    class ShopNuocHoaDBContext : DbContext
+    public class ShopNuocHoaDBContext : DbContext
     {
         public ShopNuocHoaDBContext(DbContextOptions options) : base(options)
         {
