@@ -10,7 +10,7 @@ using ShopNuocHoa.Data.EF;
 namespace ShopNuocHoa.Data.Migrations
 {
     [DbContext(typeof(ShopNuocHoaDBContext))]
-    [Migration("20210421032903_Initial")]
+    [Migration("20210421035723_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,6 +26,8 @@ namespace ShopNuocHoa.Data.Migrations
                     b.Property<int>("MaBL")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
+                        .HasAnnotation("SqlServer:IdentityIncrement", 1)
+                        .HasAnnotation("SqlServer:IdentitySeed", 1)
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Email")
@@ -64,6 +66,8 @@ namespace ShopNuocHoa.Data.Migrations
                     b.Property<int>("MaBlog")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
+                        .HasAnnotation("SqlServer:IdentityIncrement", 1)
+                        .HasAnnotation("SqlServer:IdentitySeed", 1)
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Anh")
@@ -166,7 +170,7 @@ namespace ShopNuocHoa.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnName("Ngày lập")
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 4, 21, 10, 29, 2, 771, DateTimeKind.Local).AddTicks(6673));
+                        .HasDefaultValue(new DateTime(2021, 4, 21, 10, 57, 22, 768, DateTimeKind.Local).AddTicks(3309));
 
                     b.Property<string>("NguoiNhan")
                         .IsRequired()

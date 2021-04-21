@@ -59,7 +59,7 @@ namespace ShopNuocHoa.Data.Migrations
                 {
                     MaDh = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Ngàylập = table.Column<DateTime>(name: "Ngày lập", nullable: true, defaultValue: new DateTime(2021, 4, 21, 10, 29, 2, 771, DateTimeKind.Local).AddTicks(6673)),
+                    Ngàylập = table.Column<DateTime>(name: "Ngày lập", nullable: true, defaultValue: new DateTime(2021, 4, 21, 10, 57, 22, 768, DateTimeKind.Local).AddTicks(3309)),
                     MaKh = table.Column<Guid>(nullable: false),
                     NgườiNhận = table.Column<string>(name: "Người Nhận", maxLength: 50, nullable: false),
                     Địachỉ = table.Column<string>(name: "Địa chỉ", maxLength: 300, nullable: false),

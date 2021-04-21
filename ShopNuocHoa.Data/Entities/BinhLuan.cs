@@ -8,7 +8,6 @@ namespace ShopNuocHoa.Data.Entities
     {
         public int MaBL { get; set; }
 
-        
         public string HoTen { get; set; }
 
         public string Email { get; set; }

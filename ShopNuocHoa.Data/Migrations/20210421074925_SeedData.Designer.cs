@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ShopNuocHoa.Data.EF;
 
 namespace ShopNuocHoa.Data.Migrations
 {
     [DbContext(typeof(ShopNuocHoaDBContext))]
-    partial class ShopNuocHoaDBContextModelSnapshot : ModelSnapshot
+    [Migration("20210421074925_SeedData")]
+    partial class SeedData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
