@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ShopNuocHoa.Data.Configuration;
 using ShopNuocHoa.Data.Entities;
+using ShopNuocHoa.Data.ModelBuilderExtension;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -28,7 +29,8 @@ namespace ShopNuocHoa.Data.EF
             modelBuilder.ApplyConfiguration(new SanPhamConfig());
             modelBuilder.ApplyConfiguration(new TransactionConfig());
 
-
+            //Data seeding
+            modelBuilder.Seed();
         }
 
         public DbSet<SanPham> SanPhams { get; set; }

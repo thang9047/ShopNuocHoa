@@ -15,6 +15,8 @@ namespace ShopNuocHoa.Data.Configuration
             builder.ToTable("BinhLuans");
             builder.HasKey(x => x.MaBL);
 
+            builder.Property(x => x.MaBL).UseIdentityColumn();
+
             builder.Property(x => x.HoTen).IsRequired().HasMaxLength(50).HasColumnName("Họ Tên");
 
             builder.Property(x => x.Email).IsRequired().HasMaxLength(50).HasColumnName("Email");

@@ -15,6 +15,8 @@ namespace ShopNuocHoa.Data.Configuration
 
             builder.HasKey(x => x.MaBlog);
 
+            builder.Property(x => x.MaBlog).UseIdentityColumn();
+
             builder.Property(x => x.NoiDung).HasMaxLength(3000).IsRequired().HasColumnName("Nội dung");
 
             builder.Property(x => x.Anh).IsRequired().HasMaxLength(100).HasColumnName("Ảnh");
