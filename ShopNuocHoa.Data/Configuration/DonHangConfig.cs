@@ -13,19 +13,19 @@ namespace ShopNuocHoa.Data.Configuration
         {
             builder.ToTable("DonHangs");
 
-            builder.HasKey(x => x.MaDh);
+            builder.HasKey(x => x.Id);
 
-            builder.Property(x => x.MaDh).UseIdentityColumn();
+            builder.Property(x => x.Id).UseIdentityColumn();
 
             builder.Property(x => x.NgayLap).HasColumnName("Ngày lập").HasDefaultValue(DateTime.Now);
 
-            builder.Property(x => x.NguoiNhan).IsRequired().HasMaxLength(50).HasColumnName("Người Nhận");
+            builder.Property(x => x.NguoiNhan).IsRequired().HasMaxLength(50);
 
-            builder.Property(x => x.DiaChiGiaoHang).IsRequired().HasMaxLength(300).HasColumnName("Địa chỉ");
+            builder.Property(x => x.DiaChiGiaoHang).IsRequired().HasMaxLength(300);
 
-            builder.Property(x => x.Email).IsRequired().IsUnicode(false).HasMaxLength(50).HasColumnName("Email");
+            builder.Property(x => x.Email).IsRequired().IsUnicode(false).HasMaxLength(50);
 
-            builder.Property(x => x.SDT).IsRequired().HasColumnName("Số ĐT").HasMaxLength(20);
+            builder.Property(x => x.SDT).IsRequired().HasMaxLength(20);
 
             builder.HasOne(x => x.User).WithMany(x => x.DonHangs).HasForeignKey(x => x.UserId);
         }

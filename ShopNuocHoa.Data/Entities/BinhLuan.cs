@@ -6,7 +6,7 @@ namespace ShopNuocHoa.Data.Entities
 {
     public class BinhLuan
     {
-        public int MaBL { get; set; }
+        public int Id { get; set; }
 
         public string HoTen { get; set; }
 

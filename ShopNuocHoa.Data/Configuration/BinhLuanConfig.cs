@@ -13,9 +13,9 @@ namespace ShopNuocHoa.Data.Configuration
         public void Configure(EntityTypeBuilder<BinhLuan> builder)
         {
             builder.ToTable("BinhLuans");
-            builder.HasKey(x => x.MaBL);
+            builder.HasKey(x => x.Id);
 
-            builder.Property(x => x.MaBL).UseIdentityColumn();
+            builder.Property(x => x.Id).UseIdentityColumn();
 
             builder.Property(x => x.HoTen).IsRequired().HasMaxLength(50).HasColumnName("Họ Tên");
 

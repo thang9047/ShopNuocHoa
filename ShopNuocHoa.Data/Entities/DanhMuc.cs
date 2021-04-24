@@ -7,7 +7,7 @@ namespace ShopNuocHoa.Data.Entities
 {
     public class DanhMuc
     {
-        public int MaDm { get; set; }
+        public int Id { get; set; }
         public string TenDm { get; set; }
 
         public int? ParentId { get; set; }

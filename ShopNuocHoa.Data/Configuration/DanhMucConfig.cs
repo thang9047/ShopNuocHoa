@@ -14,11 +14,11 @@ namespace ShopNuocHoa.Data.Configuration
         {
             builder.ToTable("DanhMucs");
 
-            builder.HasKey(x => x.MaDm);
+            builder.HasKey(x => x.Id);
 
-            builder.Property(x => x.MaDm).UseIdentityColumn();
+            builder.Property(x => x.Id).UseIdentityColumn();
 
-            builder.Property(x => x.TenDm).IsRequired().HasMaxLength(100).HasColumnName("Tên DanhMuc");
+            builder.Property(x => x.TenDm).IsRequired().HasMaxLength(100);
 
             builder.Property(x => x.Status).HasDefaultValue(Status.Active);
 

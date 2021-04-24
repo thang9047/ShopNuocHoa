@@ -7,7 +7,7 @@ namespace ShopNuocHoa.Data.Entities
 {
     public class DonHang
     {
-        public int MaDh { get; set; }
+        public int Id { get; set; }
         public DateTime? NgayLap { get; set; }
 
         public Guid UserId { get; set; }

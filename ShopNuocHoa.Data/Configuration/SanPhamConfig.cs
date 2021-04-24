@@ -13,15 +13,15 @@ namespace ShopNuocHoa.Data.Configuration
         {
             builder.ToTable("SanPhams");
 
-            builder.HasKey(x => x.MaSp);
+            builder.HasKey(x => x.Id);
 
-            builder.Property(x => x.MaSp).UseIdentityColumn();
+            builder.Property(x => x.Id).UseIdentityColumn();
 
             builder.Property(x => x.Gia).IsRequired();
 
             builder.Property(x => x.Stock).IsRequired().HasDefaultValue(0);
 
-            builder.Property(x => x.TenSp).IsRequired().HasMaxLength(100).HasColumnName("Tên Sản Phẩm");
+            builder.Property(x => x.TenSp).IsRequired().HasMaxLength(100);
 
             builder.HasOne(x => x.DanhMuc).WithMany(x => x.Products).HasForeignKey(x => x.MaDM);
         }

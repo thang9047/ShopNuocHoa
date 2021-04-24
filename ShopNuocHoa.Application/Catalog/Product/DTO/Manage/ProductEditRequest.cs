@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ShopNuocHoa.Data.Entities
+namespace ShopNuocHoa.Application.Catalog.Product.DTO.Manage
 {
-    public class SanPham
+    public class ProductEditRequest
     {
-        public int Id { get; set; }
         public string TenSp { get; set; }
 
         public string NhanHieu { get; set; }
@@ -14,8 +13,6 @@ namespace ShopNuocHoa.Data.Entities
         public string GioiTinh { get; set; }
 
         public double Gia { get; set; }
-
-        public int Stock { get; set; }
 
         public string XuatXu { get; set; }
 
@@ -37,18 +34,6 @@ namespace ShopNuocHoa.Data.Entities
 
         public string HuongDacTrung { get; set; }
 
-
-        public List<ChiTietDh> OrderDetails { get; set; }
-
-        public List<GioHang> Carts { get; set; }
-
-        public ICollection<BinhLuan> Comments { get; set; }
-
-        public List<SanPhamAnh> ProductImages { get; set; }
-
-        public DanhMuc DanhMuc { get; set; }
-
-        public int MaDM { get; set; }
-        
+        public string Anh { get; set; }
     }
 }
