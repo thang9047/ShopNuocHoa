@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ShopNuocHoa.Data.EF;
 
 namespace ShopNuocHoa.Data.Migrations
 {
     [DbContext(typeof(ShopNuocHoaDBContext))]
-    partial class ShopNuocHoaDBContextModelSnapshot : ModelSnapshot
+    [Migration("20210421093619_AspNetCoreIdentityDatabase")]
+    partial class AspNetCoreIdentityDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -92,13 +94,6 @@ namespace ShopNuocHoa.Data.Migrations
                     b.HasKey("RoleId", "UserId");
 
                     b.ToTable("UserRoles");
-
-                    b.HasData(
-                        new
-                        {
-                            RoleId = new Guid("d167367d-c54e-4b3d-b56b-2f318e515eba"),
-                            UserId = new Guid("afc1b360-b3d3-47ed-b7fe-13623e3addd2")
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<System.Guid>", b =>
@@ -300,7 +295,7 @@ namespace ShopNuocHoa.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnName("Ngày lập")
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 4, 24, 13, 15, 10, 895, DateTimeKind.Local).AddTicks(1284));
+                        .HasDefaultValue(new DateTime(2021, 4, 21, 16, 36, 18, 412, DateTimeKind.Local).AddTicks(3015));
 
                     b.Property<string>("NguoiNhan")
                         .IsRequired()
@@ -460,16 +455,6 @@ namespace ShopNuocHoa.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Roles");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("d167367d-c54e-4b3d-b56b-2f318e515eba"),
-                            ConcurrencyStamp = "54d73962-5137-4a67-a691-fcdfd5a0308d",
-                            Mota = "Admin Role",
-                            Name = "Admin",
-                            NormalizedName = "Admin"
-                        });
                 });
 
             modelBuilder.Entity("ShopNuocHoa.Data.Entities.SanPham", b =>
@@ -682,27 +667,6 @@ namespace ShopNuocHoa.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("afc1b360-b3d3-47ed-b7fe-13623e3addd2"),
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "8920e2a3-f5ae-4dfd-88cb-516d23ec6382",
-                            Dob = new DateTime(1999, 11, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "soivadongbon@gmail.com",
-                            EmailConfirmed = true,
-                            FirstName = "Thang",
-                            LastName = "Do",
-                            LockoutEnabled = false,
-                            NormalizedEmail = "soivadongbon@gmail.com",
-                            NormalizedUserName = "admin",
-                            PasswordHash = "AQAAAAEAACcQAAAAEO11djsYAFyYhNcjCMazM49XgEM41//DLdO9iz4hPy7fXU8PA7or969NB+aJFwWStw==",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "",
-                            TwoFactorEnabled = false,
-                            UserName = "Admin"
-                        });
                 });
 
             modelBuilder.Entity("ShopNuocHoa.Data.Entities.BinhLuan", b =>

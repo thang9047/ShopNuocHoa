@@ -24,6 +24,8 @@ namespace ShopNuocHoa.Data.Configuration
             builder.Property(x => x.NoiDung).HasMaxLength(1000).HasColumnName("Nội dung");
 
             builder.Property(x => x.ThoiGian).HasColumnName("Thời Gian");
+
+            builder.HasOne(x => x.User).WithMany(x => x.BinhLuans).HasForeignKey(x => x.UserId);
         }
     }
 }
