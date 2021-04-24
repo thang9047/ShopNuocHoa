@@ -14,8 +14,12 @@ namespace ShopNuocHoa.Data.Entities
 
         public string NoiDung { get; set; }
 
+        public Guid UserId { get; set; }
+
         public DateTime? ThoiGian { get; set; }
 
         public SanPham Product { get; set; }
+
+        public User User { get; set; }
     }
 }

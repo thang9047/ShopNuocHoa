@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using ShopNuocHoa.Data.Entities;
 using ShopNuocHoa.Data.Enums;
 using System;
@@ -24,6 +25,41 @@ namespace ShopNuocHoa.Data.ModelBuilderExtension
             //    }
             //    );
 
+            var adminId = new Guid("AFC1B360-B3D3-47ED-B7FE-13623E3ADDD2");
+            var roleId = new Guid("D167367D-C54E-4B3D-B56B-2F318E515EBA");
+
+            modelBuilder.Entity<Role>().HasData(new Role
+            {
+                Id = roleId,
+                Name="Admin",
+                NormalizedName = "Admin",
+                Mota = "Admin Role"
+            });
+
+            var hasher = new PasswordHasher<User>();
+            modelBuilder.Entity<User>().HasData(new User {
+                Id = adminId,
+                UserName = "Admin",
+                NormalizedUserName = "admin",
+                Email = "soivadongbon@gmail.com",
+                NormalizedEmail = "soivadongbon@gmail.com",
+                EmailConfirmed = true,
+                PasswordHash = hasher.HashPassword(null, "Admin_password"),
+                SecurityStamp= string.Empty,
+                FirstName = "Thang",
+                LastName = "Do",
+                Dob = new DateTime(1999, 11, 04)
+            });
+
+            modelBuilder.Entity<IdentityUserRole<Guid>>().HasData(new IdentityUserRole<Guid>
+            {
+                RoleId = roleId,
+                UserId = adminId
+            }) ;
+            
+            
+
+            
 
 
         }

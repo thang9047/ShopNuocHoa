@@ -16,5 +16,7 @@ namespace ShopNuocHoa.Data.Entities
         public SanPham Product { get; set; }
 
         public DateTime DateCreated { get; set; }
+
+        public User User { get; set; }
     }
 }

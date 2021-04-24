@@ -10,7 +10,7 @@ namespace ShopNuocHoa.Data.Entities
         public int MaDh { get; set; }
         public DateTime? NgayLap { get; set; }
 
-        public Guid MaKh { get; set; }
+        public Guid UserId { get; set; }
 
         public string NguoiNhan { get; set; }
 
@@ -21,5 +21,7 @@ namespace ShopNuocHoa.Data.Entities
         public DonHangStatus Status { get; set; }
 
         public List<ChiTietDh> OrderDetails { get; set; }
+
+        public User User { get; set; }
     }
 }
